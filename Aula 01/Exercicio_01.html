@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Inscrição Hall To Code</h1>
+        <h2>Venha participar do melhor curso do Brasil (Só não da Bahia).</h2>
+
+        <form >
+            <label for="input-email">E-mail</label>
+            <input type="text" placeholder="Preencha seu E-mail" id="input-email"><br><br>
+            <label for="input-name">Nome</label>
+            <input type="text" placeholder="Preencha seu nome" id="input-name"><br><br>
+            <label for="input-age">Idade</label>
+            <input type="text" placeholder="Preencha sua idade" id="input-age"><br><br>
+            <label for="input-date">Quando deseja começar?</label>
+            <input type="date" id="input-date"><br><br>
+            <input type="checkbox" id="input-eula" checked>
+            <!--A propriedade "_blank" na tag "a" garante que o direcionamento de link será aberto em outra aba-->
+            <label for="input-eula">Aceito os <a target="_blank" href="../Aula 01/eula.html">termos de uso</a></label><br><br>
+            <button id="botao">Enviar</button>
+        </form>
+
+        <p id="print">Preencha os campos acima.</p>
+
+        <script>
+            document.getElementById("botao").addEventListener("click", function()
+            {
+                let name, email, age, eula, printer;
+
+                do
+                {
+                    email = document.getElementById("input-email");
+                    name = document.getElementById("input-name");
+                    age = document.getElementById("input-age");
+                    age = parseInt(age);
+                    eula = document.getElementById("input-eula");
+
+                    if(!(isNaN(email))|| !(isNaN(name))|| isNaN(age)|| eula.checked == false)
+                    {
+                        window.alert("Valores inválidos!\nDigite novamente.");
+                        email.innerHTML = email.value = "";
+                        name.innerHTML = name.value = "";
+                        age.innerHTML = age.value = "";
+                        eula.innerHTML = eula.checked = false;
+
+                    }
+                }while(!(isNaN(email))|| !(isNaN(name))|| isNaN(age)|| eula.checked == false);
+
+                printer = document.getElementById("print");
+                printer.innerHTML = "<p>Email: "+email+";</p>"+
+                                    "<p>Seu nome é "+name+";</p>"+
+                                    "<p>Sua Idade é de "+age+"</p>"+
+                                    "<p>e você concorda com os termos impostos... todos... :)</p>";
+
+            });
+        </script>
+    </body>
+</html>
