@@ -7,7 +7,7 @@
         <h1>Inscrição Hall To Code</h1>
         <h2>Venha participar do melhor curso do Brasil (Só não da Bahia).</h2>
 
-        <form >
+        <form id="formulario">
             <label for="input-email">E-mail</label>
             <input type="text" placeholder="Preencha seu E-mail" id="input-email"><br><br>
             <label for="input-name">Nome</label>
@@ -16,7 +16,7 @@
             <input type="text" placeholder="Preencha sua idade" id="input-age"><br><br>
             <label for="input-date">Quando deseja começar?</label>
             <input type="date" id="input-date"><br><br>
-            <input type="checkbox" id="input-eula" checked>
+            <input type="checkbox" id="input-eula">
             <!--A propriedade "_blank" na tag "a" garante que o direcionamento de link será aberto em outra aba-->
             <label for="input-eula">Aceito os <a target="_blank" href="../Aula 01/eula.html">termos de uso</a></label><br><br>
             <button id="botao">Enviar</button>
@@ -25,35 +25,30 @@
         <p id="print">Preencha os campos acima.</p>
 
         <script>
-            document.getElementById("botao").addEventListener("click", function()
+            document.getElementById("formulario").addEventListener("submit", function(cancelaEnvio)
             {
                 let name, email, age, eula, printer;
-
-                do
-                {
-                    email = document.getElementById("input-email");
-                    name = document.getElementById("input-name");
-                    age = document.getElementById("input-age");
-                    age = parseInt(age);
-                    eula = document.getElementById("input-eula");
-
-                    if(!(isNaN(email))|| !(isNaN(name))|| isNaN(age)|| eula.checked == false)
-                    {
-                        window.alert("Valores inválidos!\nDigite novamente.");
-                        email.innerHTML = email.value = "";
-                        name.innerHTML = name.value = "";
-                        age.innerHTML = age.value = "";
-                        eula.innerHTML = eula.checked = false;
-
-                    }
-                }while(!(isNaN(email))|| !(isNaN(name))|| isNaN(age)|| eula.checked == false);
-
+                
+                email = document.getElementById("input-email").value;
+                name = document.getElementById("input-name").value;
+                age = document.getElementById("input-age").value;
+                age = parseInt(age);
+                eula = document.getElementById("input-eula");
                 printer = document.getElementById("print");
-                printer.innerHTML = "<p>Email: "+email+";</p>"+
-                                    "<p>Seu nome é "+name+";</p>"+
-                                    "<p>Sua Idade é de "+age+"</p>"+
-                                    "<p>e você concorda com os termos impostos... todos... :)</p>";
 
+                if(!(isNaN(email))|| !(isNaN(name))|| isNaN(age)|| eula.checked == false)
+                {
+                    window.alert("Valores inválidos!\nDigite novamente.")
+                    printer.innerHTML = "Preencha os campos acima.";
+                }
+                else
+                {
+                    printer.innerHTML = "<p>Email: "+email+";</p>"+
+                                        "<p>Seu nome é "+name+";</p>"+
+                                        "<p>Sua Idade é de "+age+"</p>"+
+                                        "<p>e você concorda com os termos impostos... todos... :)</p>";
+                }
+                cancelaEnvio.preventDefault();
             });
         </script>
     </body>
