@@ -1,0 +1,63 @@
+/* RESET START*/
+h1,h2,h3,h4 /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
+{
+    margin: 0;
+}
+/* RESET END */
+* /*Indica que todos os elementos herdaram esse elemento em específico. Se eu utiliza-se no body, nem todas as tags, como button, não iriam receber */
+{
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background-color: #F0F0F0; /*Esse código é um Hexadecimal que diz qual é a cor referenciada*/
+}
+h1
+{
+    color: #FF6A28;
+    font-size: 20px;
+    font-style: normal; /*Define o estilo, podendo transformar até em itálico, por exemplo*/
+    text-transform: uppercase; /*Isso transforma o texto referenciado, como nesse caso, transformando as letras em maiusculas sem afetar a tag de fato.*/   
+}
+h2
+{
+    color: #61656D;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 14px;
+}
+.container /*O ponto é para referenciar que um elemento é uma classe (class) e # é para referenciar identificador (id)*/
+{
+    margin: 0;
+    background-color: #fff;
+    width: 789px;
+    height: 574px;
+    border-radius: 5px;
+    padding: 20px 26px 12px 27px; /*Ele segue um ordem de sentido horário, referente a cima, direita, baixo, esquerda*/
+    box-sizing: border-box; /*Essa propriedade retira o excesso de pixels que o padding gera, tornando a div maior do que definimos. Ao aplicalo, independente do padding ou tamanho dos elementos, o tamanho da div será o mesmo*/
+}
+.card-box
+{
+    width: 118px;
+    height: 85px;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-title
+{
+    color: #61656D;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.card-info
+{
+    color: #FF6A28;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+}

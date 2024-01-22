@@ -1,0 +1,27 @@
+.container
+{
+    width: 500px;
+    height: 500px;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: space-evenly; /*Alinha na horizontal do flex*/
+    align-items: center; /*Alinha na direção vertical*/
+    flex-direction: column; /*direção de alinhamento do flex*/
+}
+.box
+{
+    width: 100px;
+    height: 100px;
+}
+.red
+{
+    background-color: red;
+}
+.yellow
+{
+    background-color: yellow;
+}
+.blue
+{
+    background-color: blue;
+}
