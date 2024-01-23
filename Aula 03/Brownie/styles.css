@@ -37,6 +37,12 @@ h2
     padding: 20px 26px 12px 27px; /*Ele segue um ordem de sentido horário, referente a cima, direita, baixo, esquerda*/
     box-sizing: border-box; /*Essa propriedade retira o excesso de pixels que o padding gera, tornando a div maior do que definimos. Ao aplicalo, independente do padding ou tamanho dos elementos, o tamanho da div será o mesmo*/
 }
+.card-wrapeer /*"Serve para "embrulhar elementos separados sem afetar outros dentro do container""*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .card-box
 {
     width: 118px;
@@ -46,6 +52,27 @@ h2
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+}
+.card-icon-alarm
+{
+    width: 20px;
+    height: 14px;
+}
+.card-icon-room-service
+{
+    width: 20px;
+    height: 20.14px;
+}
+.card-icon-favorite-border
+{
+    width: 20px;
+    height: 18.35px;
+}
+.card-icon-chat
+{
+    width: 20px;
+    height: 20px;
 }
 .card-title
 {
@@ -59,5 +86,42 @@ h2
     color: #FF6A28;
     font-weight: 700;
     font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card-box-member /*caixa para exibir perfil de membros*/
+{
+    width: 238px;
+    height: 85px;
+    background-color: #F0F0F0;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+.card-icon-member
+{
+    object-fit: cover; /*Fixa a imagem em sua proporção original independente do width ou height definido*/
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.card-text-member-wrapeer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.card-title-member
+{
+    color: #FF6A28; 
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-info-member
+{
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
 }
