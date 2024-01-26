@@ -1,5 +1,5 @@
 /* RESET START*/
-h1,h2,h3,h4 /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
+h1,h2,h3,h4,ul,ol,p /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
 {
     margin: 0;
 }
@@ -16,6 +16,7 @@ body
     align-items: center;
     gap: 16px; /*O gap é um espaço entre os elemntos um "vão", mais especificamente.*/
 }
+/*Inicio Brownie*/
 h1
 {
     color: #FF6A28;
@@ -35,15 +36,14 @@ h2
 {
     background-color: #fff;
     width: 798px;
-    height: 574px;
+    height: fit-content; /*Ele adapta a altura do container de acordo com os elementos inseridos dentro dele*/
     border-radius: 5px;
     padding: 20px 26px 12px 27px; /*Ele segue um ordem de sentido horário, referente a cima, direita, baixo, esquerda*/
     box-sizing: border-box; /*Essa propriedade retira o excesso de pixels que o padding gera, tornando a div maior do que definimos. Ao aplicalo, independente do padding ou tamanho dos elementos, o tamanho da div será o mesmo*/
 }
 .main-image-brownie
 {
-    margin: 0;
-    padding: 0;
+    display: block; /*Por algum motivo, ao aplicar a tag DOCTYPE, ele cria um espaço em branco embaixo da imagem, então eu utilizei o display block, retirando isso. Se eu não usar a tag Doctype, funciona também.*/
 }
 .card-wrapeer /*"Serve para "embrulhar elementos separados sem afetar outros dentro do container""*/
 {
@@ -134,3 +134,80 @@ h2
     font-size: 14px;
     font-weight: 400;
 }
+/*Fim Brownie*/
+
+/*Inicio Ingredientes*/
+.title-wrapeer
+{
+    display: flex;
+    justify-content: center;
+}
+.apron-icon
+{
+    width: 20px;
+    height: 23.2px;
+    margin-right: 8px;
+}
+.secondary-title
+{
+    color: #FF6A28;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+}
+.igredients-list li
+{
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+/*Fim ingredientes*/
+
+/*Inicio preparo*/
+.pan-icon
+{
+    width: 20px;
+    height: 18.227px;
+    margin-right: 8px;
+}
+.preparation-list li
+{
+    color: #61656D;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.preparation-list li::marker
+{
+    font-size: 20px;
+    font-weight: 400;
+}
+/*Fim preparo*/
+
+/*Inicio informações adicionais*/
+.complement-title
+{
+    width: 754px;
+    color: #61656D;
+    font-size: 16px;
+    background-color: #F0F0F0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    margin-bottom: 16px;
+}
+.complement-text
+{
+    width: 743px;
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+/*Fim informações adicionais*/
