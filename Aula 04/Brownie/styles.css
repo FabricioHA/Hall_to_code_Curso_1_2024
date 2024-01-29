@@ -1,0 +1,220 @@
+/* RESET START*/
+h1,h2,h3,h4,ul,ol,p /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
+{
+    margin: 0;
+}
+/* RESET END */
+* /*Indica que todos os elementos herdaram esse elemento em específico. Se eu utiliza-se no body, nem todas as tags, como button, não iriam receber */
+{
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background-color: #F0F0F0; /*Esse código é um Hexadecimal que diz qual é a cor referenciada*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /*O gap é um espaço entre os elemntos um "vão", mais especificamente.*/
+    counter-reset: numero-1;
+}
+/*Inicio Brownie*/
+h1
+{
+    color: #FF6A28;
+    font-size: 20px;
+    font-style: normal; /*Define o estilo, podendo transformar até em itálico, por exemplo*/
+    text-transform: uppercase; /*Isso transforma o texto referenciado, como nesse caso, transformando as letras em maiusculas sem afetar a tag de fato.*/
+}
+h2
+{
+    color: #61656D;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 14px;
+}
+.container /*O ponto é para referenciar que um elemento é uma classe (class) e # é para referenciar identificador (id)*/
+{
+    background-color: #fff;
+    width: 798px;
+    height: fit-content; /*Ele adapta a altura do container de acordo com os elementos inseridos dentro dele*/
+    border-radius: 5px;
+    padding: 20px 26px 12px 27px; /*Ele segue um ordem de sentido horário, referente a cima, direita, baixo, esquerda*/
+    box-sizing: border-box; /*Essa propriedade retira o excesso de pixels que o padding gera, tornando a div maior do que definimos. Ao aplicalo, independente do padding ou tamanho dos elementos, o tamanho da div será o mesmo*/
+}
+.main-image-brownie
+{
+    display: block; /*Por algum motivo, ao aplicar a tag DOCTYPE, ele cria um espaço em branco embaixo da imagem, então eu utilizei o display block, retirando isso. Se eu não usar a tag Doctype, funciona também.*/
+}
+.card-wrapeer /*"Serve para "embrulhar elementos separados sem afetar outros dentro do container""*/
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.card-box
+{
+    width: 118px;
+    height: 85px;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.card-icon-alarm
+{
+    width: 20px;
+    height: 14px;
+}
+.card-icon-room-service
+{
+    width: 20px;
+    height: 20.14px;
+}
+.card-icon-favorite-border
+{
+    width: 20px;
+    height: 18.35px;
+}
+.card-icon-chat
+{
+    width: 20px;
+    height: 20px;
+}
+.card-title
+{
+    color: #61656D;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.card-info
+{
+    color: #FF6A28;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card-box-member /*caixa para exibir perfil de membros*/
+{
+    width: 238px;
+    height: 85px;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    gap: 11px; /*Defini um espaço entre os elementos, quase como se fosse um justify-content manual, para definir um espaço específico.*/
+}
+.card-icon-member
+{
+    object-fit: cover; /*Fixa a imagem em sua proporção original independente do width ou height definido*/
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.card-text-member-wrapeer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.card-title-member
+{
+    color: #FF6A28; 
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-info-member
+{
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*Fim Brownie*/
+
+/*Inicio Ingredientes*/
+.title-wrapeer
+{
+    display: flex;
+    justify-content: center;
+}
+.apron-icon
+{
+    width: 20px;
+    height: 23.2px;
+    margin-right: 8px;
+}
+.secondary-title
+{
+    color: #FF6A28;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+}
+.igredients-list li
+{
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+/*Fim ingredientes*/
+
+/*Inicio preparo*/
+.pan-icon
+{
+    width: 20px;
+    height: 18.227px;
+    margin-right: 8px;
+}
+.preparation-list p
+{
+    display: flex;
+    align-items: first baseline;
+    color: #61656D;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+.preparation-list p::before 
+{
+    counter-increment: numero-1;
+    content: counter(numero-1);
+    margin-right: 8px;
+    font-size: 20px;
+    font-weight: 400;
+}
+/*Fim preparo*/
+
+/*Inicio informações adicionais*/
+.complement-title
+{
+    width: 754px;
+    color: #61656D;
+    font-size: 16px;
+    background-color: #F0F0F0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    margin-bottom: 16px;
+}
+.complement-text
+{
+    width: 743px;
+    color: #61656D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+/*Fim informações adicionais*/
