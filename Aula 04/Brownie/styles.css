@@ -1,5 +1,5 @@
 /* RESET START*/
-h1,h2,h3,h4,ul,ol,p /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
+h1,h2,h3,h4,ul,ol,p,li /*Aqui, todos esses elementos não teram margin, removendo padrões que aparecem ao longo do código*/
 {
     margin: 0;
 }
@@ -159,7 +159,11 @@ h2
     margin: 0;
     margin-bottom: 12px;
 }
-.igredients-list li
+.ingredients-list
+{
+    padding: 27px;
+}
+.ingredients-list li
 {
     color: #61656D;
     font-size: 14px;
