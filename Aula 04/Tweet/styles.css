@@ -1,0 +1,147 @@
+/*reset start*/
+p,a
+{
+    margin: 0;
+}
+a:link
+{
+    text-decoration: none;
+}
+/*reset end*/
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*Inicio tweet*/
+.container
+{
+    width: 591px;
+    height: 161px;
+    border: 1px solid #DADDDF;
+    display: flex;
+    padding: 17px 84px 19px 17px;
+    box-sizing: border-box;
+    gap: 12px;
+}
+    /*Incio icone perfil*/
+    .icon-foto-perfil
+    {
+        width: 48px;
+        height: 48px;
+    }
+    /*Fim icone perfil*/
+
+    /*Inicio informações tweet*/
+    .tweet-wrapeer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+        /*Inicio nickname tweet*/
+        .nickname-wrapeer
+        {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 5px;
+
+        }
+            /*Inicio itens nickname*/
+            .tweet-name
+            {
+                font-size: 15px;
+                color: #0F1419;
+                font-weight: 700;
+            }
+            .icon-checked
+            {
+                width: 15px;
+                height: 15px;
+                margin-left: 3px;
+            }
+            .tweet-nick
+            {
+                font-size: 15px;
+                color: #536471;
+                margin-left: 6px;
+            }
+            .between-point
+            {
+                color: #536471;
+                font-size: 15px;
+            }
+            .date-post
+            {
+                color: #536471;
+                font-size: 15px;
+            }
+            /*Fim itens nickname*/
+        /*Fim nickname tweet*/
+        
+        /*Inicio mensagem tweet*/
+        .tweet-menssage
+        {
+            font-size: 15px;
+            color: #0F1419;
+            margin-bottom: 16px;
+        }
+        /*Fim mensagem tweet*/
+        
+        /*Inicio opções tweet*/
+        .options-wrapeer
+        {
+            display: flex;
+            justify-content: start;
+            gap: 73px;
+        }
+            /*Inicio botão de ação*/
+            .button-wrapper
+            {
+                display: flex;
+                gap: 17px;
+                align-items: center;
+            }
+                /*Inicio elementos botão*/
+                .icon-comment
+                {
+                    width: 15px;
+                    height: 13.489px;
+                }
+                .icon-retweet
+                {
+                    width: 15px;
+                    height: 15px;
+                }
+                .icon-favorite
+                {
+                    width: 15px;
+                    height: 13.082px;
+                }
+                .icon-share
+                {
+                    width: 15px;
+                    height: 14.441px;
+                }
+                .tweet-button-text
+                {
+                    font-size: 13px;
+                    color: #536471;
+                }
+                /*Fim elementos botão*/
+            /*Fim botão de ação*/
+
+        /*Fim opções tweet*/
+    /*Inicio informações tweet*/
+
+/*Fim tweet*/
