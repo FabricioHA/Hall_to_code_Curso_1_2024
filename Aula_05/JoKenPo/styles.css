@@ -1,0 +1,34 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    width: 100vw; /*Ele pega uma medida de 100% na visão do usuário, seja altura ou largura*/
+    height: 100vh;
+}
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winner-title
+{
+    background-color: #09f;
+    color: #fff;
+    height: 74px;
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+    font-size: 33px;
+}
+.scoreboard-box
+{
+    width: 50%;
+    height: 148px;
+    background-color: #09f;
+    border-radius: 17px;
+}
