@@ -2,8 +2,11 @@ body
 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100vw; /*Ele pega uma medida de 100% na visão do usuário, seja altura ou largura*/
     height: 100vh;
+    background-color: #ccc;
 }
 header
 {
@@ -24,11 +27,88 @@ header
     align-items: center;
     border-radius: 12px 12px 0px 0px;
     font-size: 33px;
+    font-weight: 500;
 }
 .scoreboard-box
 {
-    width: 50%;
+    width: 60%;
     height: 148px;
     background-color: #09f;
     border-radius: 17px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.player-name
+{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+}
+.score
+{
+    color: #0099ff;
+    font-size: 104px;
+    font-weight: 900;
+    background-color: #dbf1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 131px;
+    height: 120px;
+    border-radius: 17px;
+}
+.versus-separator
+{
+    font-size: 58px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+}
+.battle-field
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    background-color: red;
+    width: 100%;
+    height: 45%;
+
+}
+.button-move-wrapeer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.button-move
+{
+    height: 80px;
+    width: 220px;
+    background-color: #0099ff;
+    color: #DBF1FF;
+    font-size: 44px;
+    font-weight: 500;
+    border: 1px solid #0099ff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button-move:hover
+{
+    background-color: white;
+    transition-duration: 300ms;
+    color: #0099ff;
+}
+.board
+{
+
+}
+
+.config-box
+{
+    display: flex;
+    gap:100px;
+    margin-top: 22px;
 }
