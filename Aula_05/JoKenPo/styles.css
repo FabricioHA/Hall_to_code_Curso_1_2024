@@ -110,7 +110,7 @@ header
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    gap: 60px;
+    gap: 34px;
     width: 100%;
     min-width: 60%;
     height: 100%;
@@ -137,7 +137,9 @@ header
 {
     body
     {
-        background-color: red;
+        padding: 1%;
+        box-sizing: border-box;
+        justify-content: space-evenly;
     }
     .player-name
     {
@@ -155,7 +157,7 @@ header
     .config-box
     {
         gap: 10px;
-        flex-direction: column;
+        flex-direction: row;
     }
     .battle-field
     {
@@ -164,6 +166,7 @@ header
     .button-move-wrapeer
     {
         flex-direction: row;
+        height: unset;
     }
     .button-move
     {
@@ -177,5 +180,9 @@ header
     .board
     {
         padding: 10px;
+    }
+    .move-box
+    {
+        width: 40%;
     }
 }
