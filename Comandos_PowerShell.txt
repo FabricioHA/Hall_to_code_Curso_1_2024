@@ -1,0 +1,30 @@
+Comandos para devs no PowerShell:
+
+ls --> (Siginifica list) Esse comando lista quais pastas estão presentes dentro do usuário utilizado no windows no momento atual, como por exemplo agora:
+
+diretório: C:\Users\Supervisor
+
+CD .\ --> (Significa change directory) Esse comando basicamente escolhe o diretório de uma pasta ou arquivo no windows. podendo ser utilizado para navegar entre as pastas desejadas apenas via cmd.
+
+mkdir --> (Siginifica "make directory") é auto explicativo. Serve para criar pastas e diretórios entre os caminhos navegaveis.
+
+explorer . --> "explorer" referese ao explorador de arquivos do windows e " ." é referente a pasta atual. você consegue abrir o explorador e as pastas dentro do diretório que você está localizado no PowerShell. Podemos até adentrar nas ramificações da pasta atual, como quando escolhemos caminhos para importar arquivos no CSS.
+
+"cd .." ou "explorer .." --> O "ponto ponto" é referente a voltar uma pasta anterior a que você esá atualmente.
+
+code --> siginifica que você quer executar o Visual Studio Code na sua máquina. Se eu quiser abrir uma pasta no code, basta aplicar a mesma lógica dos outros comandos anteriores:
+   code . -->Ele vai basicamente abrir a pasta atual do PowerShell
+
+Comandos do Git
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+git --version --> mostra qual a versão atual do git instalada na máquina.
+
+	"your_email@example.com" --> Gera uma chave ssh na máquina.
+
+git add . --> pede para adicionar todos os aqruivos no diretório presente ao github.
+
+git commit -m "anything" --> é obrigatório após usar o comando "git add". Ele pede para você específicar qual é o compromentimento que você teve ao "upar" esse git ao main, main esse que está no github.
+
+git config --global user.email "kfkdo@kfdkfdl.com" --> esse comando serva para específicar quem está mandando ou realizando o commit atual para o main git.
