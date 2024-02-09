@@ -5,8 +5,7 @@ body
     align-items: center;
     flex-direction: column;
     width:100vw; /*Ele pega uma medida de 100% na visão do usuário, seja altura ou largura*/
-    height:100vh;
-    background-color: #ccc;
+    height:100vh;   
 }
 
 header
