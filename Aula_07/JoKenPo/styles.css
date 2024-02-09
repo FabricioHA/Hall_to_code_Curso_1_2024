@@ -125,6 +125,18 @@ header
     height: 100%;  
     background-color: #DBF1FF;
     border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move-box img
+{
+    width: 70%;
+    height: auto;
+}
+#move-box-2 img
+{
+    transform: rotateY(180deg);
 }
 
 .config-box
