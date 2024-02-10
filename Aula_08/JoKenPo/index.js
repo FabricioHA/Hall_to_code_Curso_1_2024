@@ -26,8 +26,42 @@ function setWinner()
 {
     if(movePlayer1 == 'stone' && movePlayer2 == 'paper')
     {
-        alert("jogador 2 ganhou");
+        winner = 2;  
     }
+    else if(movePlayer1 == 'stone' && movePlayer2 == 'stone')
+    {
+        winner = 3;
+    }
+    else if(movePlayer1 == 'stone' && movePlayer2 == 'scissor')
+    {
+        winner = 1;
+    }
+    else if(movePlayer1 == 'paper' && movePlayer2 == 'stone')
+    {
+        winner = 1
+    }
+    else if(movePlayer1 == 'paper' && movePlayer2 == 'paper')
+    {
+        winner = 3;
+    }
+    else if(movePlayer1 == 'paper' && movePlayer2 == 'scissor')
+    {
+        winner = 2;
+    }
+    else if(movePlayer1 == 'scissor' && movePlayer2 == 'stone')
+    {
+        winner = 2;
+    }
+    else if(movePlayer1 == 'scissor' && movePlayer2 == 'paper')
+    {
+        winner = 1;
+    }
+    else if(movePlayer1 == 'scissor' && movePlayer2 == 'scissor')
+    {
+        winner = 3;
+    }
+
+    alert("O vencedor é " + winner);
 }
 
 //P1
@@ -35,17 +69,19 @@ function handleStone1Move()
 {
     $moveBox1.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
     movePlayer1 = 'stone';
-    console.log(movePlayer1)
+    setWinner()
 }
 function handlePaper1Move()
 {
     $moveBox1.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
     movePlayer1 = 'paper';
+    setWinner()
 }
 function handleScissor1Move()
 {
     $moveBox1.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
     movePlayer1 = 'scissor';
+    setWinner()
 }
 
 //P2
@@ -53,16 +89,19 @@ function handleStone2Move()
 {
     $moveBox2.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
     movePlayer2 = 'stone';
+    setWinner()
 }
 function handlePaper2Move()
 {
     $moveBox2.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
     movePlayer2 = 'paper';
+    setWinner()
 }
 function handleScissor2Move()
 {
     $moveBox2.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
     movePlayer2 = 'scissor';
+    setWinner()
 }
 
 //P1

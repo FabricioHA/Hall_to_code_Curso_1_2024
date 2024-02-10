@@ -19,6 +19,10 @@ Comandos do Git
 
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+Os comandos acima são para validar o usuário que irar fazer comits no main.
+
 git --version --> mostra qual a versão atual do git instalada na máquina.
 
 	"your_email@example.com" --> Gera uma chave ssh na máquina.
