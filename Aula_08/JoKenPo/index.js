@@ -121,7 +121,7 @@ function printWinnerName()
 {
     if(winner == 0)
     {
-        $winnerTitle.innerHTML = "Clique em iniciar para jogar";
+        $winnerTitle.innerHTML = "Esperando o outro jogador...";
     }
     else if(winner == 1)
     {
@@ -136,6 +136,10 @@ function printWinnerName()
         $winnerTitle.innerHTML = "Deu marmelada!";
     }
 }
+function printStartGame()
+{
+    $winnerTitle.innerHTML = "Clique em iniciar para jogar";
+}
 /*Se essa função aplicada sem uma regra para executar, ela irá resetar elemento indiscriminadamente,
 resetando o elemento antes de sequer ser exibido ao usuário*/ 
 function resetBattlefield() 
@@ -148,6 +152,12 @@ function resetMoveVariables()
 {
     movePlayer1 = '';
     movePlayer2 = '';
+}
+
+function resetPrintPlayerScore()
+{
+    $printScore1.innerHTML = "00";
+    $printScore2.innerHTML = "00";
 }
 
 //P1
@@ -253,9 +263,12 @@ function handleScissor2Move()
 
 function handleGameReset()
 {
+    winner = 0;
     resetBattlefield();
     resetMoveVariables();
-    winner = 0;
+    printWinnerName();
+    resetPrintPlayerScore();
+    printStartGame();
 }
 
 //P1
