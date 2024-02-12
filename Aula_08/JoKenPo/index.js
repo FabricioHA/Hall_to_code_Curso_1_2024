@@ -23,6 +23,7 @@ const $moveBox2 = document.querySelector("#move-box-2");
 const $winnerTitle = document.querySelector(".winner-title");
 
 //Botões de controle do jogo
+const $buttonStartGame = document.querySelector(".button-start-game");
 const $buttonGameReset = document.querySelector(".button-game-reset");
 
 /*let são variaveis que podem mudar de valor, ou seja, seus valores não são constantes*/ 
@@ -31,6 +32,7 @@ let movePlayer2 = '';
 let player1Score = 0;
 let player2Score = 0;
 let winner = 0;
+let startButton = "false";
 
 function setWinner()
 {
@@ -101,7 +103,11 @@ function addWinnerScore()
         player2Score++; //Ou player2Score = player2Score + 1;  
      }
 }
-
+function resetWinnerScore()
+{
+    player1Score = 0;
+    player2Score = 0;
+}
 function printPlayerScore()
 {
     $printScore1.innerHTML = showPadStart(player1Score);
@@ -163,102 +169,153 @@ function resetPrintPlayerScore()
 //P1
 function handleStone1Move()
 {
-    $moveBox1.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
-    movePlayer1 = 'stone';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        /*setTimeout() define um tempo especifico para executar uma função.
-        seu primeiro parametro é a função, e o segundo parametro é o tempo desejado para executa-la.
-        A medida é feita em milissegundos, ou seja, 1000 milissegundos é o equivalente a 1 segundo, 
-        como por exemplo:
-
-        setTimeout(função(), tempoParaExecutar);
-        */
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
     }
+    else if(startButton == "true")
+    {
+        $moveBox1.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
+        movePlayer1 = 'stone';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            /*setTimeout() define um tempo especifico para executar uma função.
+            seu primeiro parametro é a função, e o segundo parametro é o tempo desejado para executa-la.
+            A medida é feita em milissegundos, ou seja, 1000 milissegundos é o equivalente a 1 segundo, 
+            como por exemplo:
+
+            setTimeout(função(), tempoParaExecutar);
+            */
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }
+    }
+    
 }
 function handlePaper1Move()
 {
-    $moveBox1.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
-    movePlayer1 = 'paper';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
     }
+    else if(startButton == "true")
+    {
+        $moveBox1.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
+        movePlayer1 = 'paper';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }   
+    }
+    
 }
 function handleScissor1Move()
 {
-    $moveBox1.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
-    movePlayer1 = 'scissor';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
+    }
+    else if(startButton == "true")
+    {
+        $moveBox1.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
+        movePlayer1 = 'scissor';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }   
     }
 }
 
 //P2
 function handleStone2Move()
 {
-    $moveBox2.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
-    movePlayer2 = 'stone';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
+    }
+    else if(startButton == "true")
+    {
+        $moveBox2.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
+        movePlayer2 = 'stone';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }    
     }
 }
 function handlePaper2Move()
 {
-    $moveBox2.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
-    movePlayer2 = 'paper';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
     }
+    else if(startButton == "true")
+    {
+        $moveBox2.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
+        movePlayer2 = 'paper';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }    
+    }
+    
 }
 function handleScissor2Move()
 {
-    $moveBox2.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
-    movePlayer2 = 'scissor';
-    setWinner();
-    addWinnerScore();
-    printPlayerScore();
-    printWinnerName();
-    if(winner != 0)
+    if(startButton == "false")
     {
-        setTimeout(resetBattlefield, 1000);
-        resetMoveVariables();
-        winner = 0;
+        return
     }
+    else if(startButton == "true")
+    {
+        $moveBox2.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
+        movePlayer2 = 'scissor';
+        setWinner();
+        addWinnerScore();
+        printPlayerScore();
+        printWinnerName();
+        if(winner != 0)
+        {
+            setTimeout(resetBattlefield, 1000);
+            resetMoveVariables();
+            winner = 0;
+        }
+    }
+}
+
+function handleGameStart()
+{
+    startButton = "true";
+    $winnerTitle.innerHTML = "Pode começar";
 }
 
 function handleGameReset()
@@ -266,9 +323,10 @@ function handleGameReset()
     winner = 0;
     resetBattlefield();
     resetMoveVariables();
-    printWinnerName();
     resetPrintPlayerScore();
     printStartGame();
+    resetWinnerScore();
+    startButton = "false";
 }
 
 //P1
@@ -282,8 +340,8 @@ $buttonPaperPlayer2.addEventListener("click", handlePaper2Move);
 $buttonScissorPlayer2.addEventListener("click", handleScissor2Move);
 
 //Game options
+$buttonStartGame.addEventListener("click", handleGameStart);
 $buttonGameReset.addEventListener("click", handleGameReset);
-
 
 /*a Função addEventListener tem dois parâmetros, o primeiro sendo a ação que
 ela irá escutar, sendo nesse caso um clique, e o sengundo a ação que ela irá
