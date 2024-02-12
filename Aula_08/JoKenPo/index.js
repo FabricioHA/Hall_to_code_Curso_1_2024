@@ -175,7 +175,7 @@ function handleStone1Move()
     }
     else if(startButton == "true")
     {
-        $moveBox1.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
+        $moveBox1.innerHTML = "<img src='images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
         movePlayer1 = 'stone';
         setWinner();
         addWinnerScore();
@@ -205,7 +205,7 @@ function handlePaper1Move()
     }
     else if(startButton == "true")
     {
-        $moveBox1.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
+        $moveBox1.innerHTML = "<img src='images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
         movePlayer1 = 'paper';
         setWinner();
         addWinnerScore();
@@ -228,7 +228,7 @@ function handleScissor1Move()
     }
     else if(startButton == "true")
     {
-        $moveBox1.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
+        $moveBox1.innerHTML = "<img src='images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
         movePlayer1 = 'scissor';
         setWinner();
         addWinnerScore();
@@ -252,7 +252,7 @@ function handleStone2Move()
     }
     else if(startButton == "true")
     {
-        $moveBox2.innerHTML = "<img src='/images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
+        $moveBox2.innerHTML = "<img src='images/icons/stone.png' title='Ícone de pedra' alt='ícone de pedra'>";
         movePlayer2 = 'stone';
         setWinner();
         addWinnerScore();
@@ -274,7 +274,7 @@ function handlePaper2Move()
     }
     else if(startButton == "true")
     {
-        $moveBox2.innerHTML = "<img src='/images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
+        $moveBox2.innerHTML = "<img src='images/icons/paper.png' title='Ícone de papel' alt='ícone de papel'>";
         movePlayer2 = 'paper';
         setWinner();
         addWinnerScore();
@@ -297,7 +297,7 @@ function handleScissor2Move()
     }
     else if(startButton == "true")
     {
-        $moveBox2.innerHTML = "<img src='/images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
+        $moveBox2.innerHTML = "<img src='images/icons/scissors.png' title='Ícone de tesoura' alt='ícone de tesoura'>";
         movePlayer2 = 'scissor';
         setWinner();
         addWinnerScore();
