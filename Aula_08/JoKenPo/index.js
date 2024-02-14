@@ -176,7 +176,7 @@ function resetAll()
     resetWinnerScore();
     startButton = false;
     $buttonStartGame.textContent = "Iniciar";
-    $buttonStartGame.classList.remove('started')
+    $buttonStartGame.classList.remove('started');
 }
 
 //P1
@@ -300,7 +300,8 @@ function handleToggleGame()
     {
         startButton = true;
         $buttonStartGame.textContent = "Parar";
-        $buttonStartGame.classList.add('started')
+        $buttonStartGame.classList.add('started');
+        $winnerTitle
     }
 }
 
