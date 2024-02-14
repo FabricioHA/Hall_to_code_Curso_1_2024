@@ -138,6 +138,16 @@ header
     transform: rotateY(180deg);
 }
 
+.started
+{
+    background-color: red;
+    border: 1px solid red;
+}
+.started:hover
+{
+    color: red;
+}
+
 .config-box
 {
     display: flex;
