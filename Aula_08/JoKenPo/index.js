@@ -144,7 +144,7 @@ function printWinnerName()
 }
 function printStartGame()
 {
-    $winnerTitle.innerHTML = "Clique em iniciar para jogar";
+    $winnerTitle.innerHTML = "Clique em iniciar";
 }
 /*Se essa função aplicada sem uma regra para executar, ela irá resetar elemento indiscriminadamente,
 resetando o elemento antes de sequer ser exibido ao usuário*/ 
