@@ -66,7 +66,4 @@ $wapeerBoxes.addEventListener("click", function(event)
     }
 });
 
-
 $restoreButton.addEventListener("click", restoreBox);
-
-
