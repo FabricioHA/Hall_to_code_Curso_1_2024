@@ -23,7 +23,7 @@ function restoreBox()
         removeBox(index);
         /*Abaixo, temos um modelo de como criar elementos html sem usar o inner html, declarando o tipo de elemento e a sua classe*/
         let creatBox = document.createElement("div");
-        creatBox.className = "box-"+index;
+        creatBox.className = "box-"+index+" box";
         $wapeerBoxes.appendChild(creatBox);
         if(index ==1)
         {
