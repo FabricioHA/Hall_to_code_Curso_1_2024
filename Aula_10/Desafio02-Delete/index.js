@@ -9,35 +9,37 @@ const $restoreButton = document.querySelector(".restore-boxes");
 function removeBox(numberBox)
 {
     let $box = document.querySelector(".box-"+numberBox);
-    $box.remove();
-    $box = '';
+    if(!($box == null)) //Se o valor que ele recebe não for nulo, executar a função remove
+    {
+        $box.remove();
+    }
 }
 
 function restoreBox()
 {
-    if($box1.innerHTML == "" || $box2.innerHTML == "" || $box3.innerHTML == "" || $box3.innerHTML == "")
+
+    for(let index = 1; index<=4; index++)
     {
-        for(let index = 1; index<=4; index++)
+        removeBox(index);
+        /*Abaixo, temos um modelo de como criar elementos html sem usar o inner html, declarando o tipo de elemento e a sua classe*/
+        let creatBox = document.createElement("div");
+        creatBox.className = "box-"+index;
+        $wapeerBoxes.appendChild(creatBox);
+        if(index ==1)
         {
-            box = document.createElement("div");
-            box.className = "box-"+index;
-            $wapeerBoxes.appendChild(box);
-            if(index ==1)
-            {
-                $box1.innerHTML;         
-            }
-            else if(index == 2)
-            {
-                $box2.innerHTML;
-            }
-            else if(index == 3)
-            {
-                $box3.innerHTML;
-            }
-            else if(index == 4)
-            {
-                $box4.innerHTML;
-            }
+            $box1.innerHTML;         
+        }
+        else if(index == 2)
+        {
+            $box2.innerHTML;
+        }
+        else if(index == 3)
+        {
+            $box3.innerHTML;
+        }
+        else if(index == 4)
+        {
+            $box4.innerHTML;
         }
     }
 }
@@ -62,27 +64,9 @@ $wapeerBoxes.addEventListener("click", function(event)
     {
         removeBox(4);
     }
-}, true);
+});
 
 
 $restoreButton.addEventListener("click", restoreBox);
-/*
-$box1.addEventListener("click", function()
-{
-    removeBox(1);
-});
-$box2.addEventListener("click", function()
-{
-    removeBox(2);
-});
-$box3.addEventListener("click", function()
-{
-    removeBox(3);
-});
-$box4.addEventListener("click", function()
-{
-    removeBox(4);
-});
-*/
 
 
