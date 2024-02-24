@@ -7,7 +7,6 @@ $form.addEventListener("submit", function(event)
     event.preventDefault(); //aborta a reiniciação padrão do formulário na página ao clicar em um botão.
 
     $outputNumber.textContent = "";
-    
 
     const number = $inputNumber.value;
 
