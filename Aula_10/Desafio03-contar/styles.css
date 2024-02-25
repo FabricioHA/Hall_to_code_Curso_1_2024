@@ -1,8 +1,12 @@
 /*Reset start*/
-body, html div
+body, html div, h1
 {
     padding: 0;
     margin: 0;
+}
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
 }
 /*Reset end*/
 
@@ -14,7 +18,17 @@ body
     align-items: center;
     width: 100%;
     height: 100vh;
-    gap: 10px;
+    gap: 30px;
+}
+
+.main-title
+{
+    font-size: 25px;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
 }
 .wrapeer-output
 {
@@ -23,7 +37,8 @@ body
     align-items: center;
     width: 30%;
     height: 50%;
-    background-color: #ccc;
+    background-color: gray;
+    color: #ffffff;
     border-radius: 10px;
     padding: 10px;
 }
@@ -32,6 +47,7 @@ body
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    text-align: justify;
 }
 .input-numbers
 {

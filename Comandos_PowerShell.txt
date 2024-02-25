@@ -32,3 +32,5 @@ git add . --> pede para adicionar todos os aqruivos no diretório presente ao gi
 git commit -m "anything" --> é obrigatório após usar o comando "git add". Ele pede para você específicar qual é o compromentimento que você teve ao "upar" esse git ao main, main esse que está no github.
 
 git config --global user.email "kfkdo@kfdkfdl.com" --> esse comando serva para específicar quem está mandando ou realizando o commit atual para o main git.
+
+git pull ssh address  ----> Esse comando atualiza a pasta local na máquina.
