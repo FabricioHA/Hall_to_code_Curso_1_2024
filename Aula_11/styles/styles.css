@@ -1,0 +1,38 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+.small-container
+{
+    width: 25%;
+    height: 100%;
+    background-color: #0d99ff;
+    padding: 50px 35px;
+}
+.big-container
+{
+    width: 50%;
+    height: 100%;
+    background-color: #2ba9ea;
+}
+.player-field
+{
+    width: 317px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+}
+.player-field-2
+{
+    width: 317px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+}
