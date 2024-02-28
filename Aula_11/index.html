@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="widht=device-width, initial-scale=1.0">
 
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/styles.css">
         <title>Jogo da Velha</title>
@@ -13,13 +18,26 @@
             <section class="small-container">
                 <input class="player-field" type="text" placeholder="Jogador 1">
                 <div class="box-player-field">
-                    <input class="player-field-2" type="text">
+                    <input class="player-field-2" type="text" placeholder="Jogador 2">
                     <div class="switcher">
-                        <div class="switcher-ball">
-
-                        </div>
+                        <div class="switcher-ball"></div>
                     </div>
                 </div>
+                <div class="box-game-type">
+                    <h3 class="game-type-title">Tipo de partida</h3>
+                    <div class="game-type-wrapper">
+                        <span class="game-type-mode-text">Melhor de 3</span>
+                        <div class="switcher switcher-white">
+                            <div class="switcher-ball"></div>
+                        </div>
+                        <span class="game-type-mode-text">Melhor de 5</span>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="button button-green">Jogar</button>
+                </div>
+                
+                <!--<button class="button button-white">Resetar</button>-->
             </section>
             <section class="big-container"></section>
             <section class="small-container"></section>
