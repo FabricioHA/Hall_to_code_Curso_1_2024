@@ -159,3 +159,138 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
     background-color: #ffffff;
     color: #0097E6;
 }
+.match-history-box
+{
+    margin-top: 38px;
+    width: 100%;
+}
+.match-history-list
+{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 140px;
+}
+.match-hitory-title
+{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+.match-history-scenery-wrapper
+{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.match-history-winner-box
+{
+    width: 50%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+.winner-label
+{
+    font-size: 14px;
+    font-weight: 700;
+    color: #45F391;
+}
+.winner-name
+{
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+}
+.match-history-separator
+{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+.scenary-box
+{
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.scenary-field
+{
+    width: 160px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+    color: #828282;
+    font-weight: 700;
+}
+.scenary-small
+{
+    width: 49px;
+    gap: 2px;
+}
+.scenary-small .scenary-field
+{
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+/*Start Scrollbar*/
+::-webkit-scrollbar /*scrollbar width*/
+{
+    width: 5px;
+}
+::-webkit-scrollbar-track /*scrollbar track (trilha da barra)*/
+{
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb /*scrollbar background color*/
+{
+    background-color: #888;
+}
+::-webkit-scrollbar-thumb:hover /*scrollbar background color houver*/
+{
+    background-color: #555;
+}
+/*End scrollbar*/
+
+.white-button-wrapper
+{
+    margin-top: 98px;
+}
+
+@media screen and (max-width:1670px)
+{
+    .small-container
+    {
+        padding: 20px 35px;
+    }
+    .box-game-type
+    {
+        margin-top: 10px;
+    }
+    .button-wrapper
+    {
+        margin-top: 20px;
+    }
+    .white-button-wrapper
+    {
+        margin-top: 40px;
+    }
+}
