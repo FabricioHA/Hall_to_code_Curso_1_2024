@@ -46,6 +46,7 @@ body
     }
     .cards-wrapeer
     {
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -123,6 +124,7 @@ body
     /*Inicio colaboradores-wrapeer*/
     .footer-wrapeer
     {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
