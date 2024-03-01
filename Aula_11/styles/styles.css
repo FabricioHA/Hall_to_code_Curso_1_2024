@@ -257,6 +257,19 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
     border-radius: 2px;
 }
 
+.scenary-middle
+{
+    width: auto;
+    gap: 0;
+}
+.scenary-middle .scenary-field
+{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    font-size: 48px;
+    font-weight: 700;
+}
 /*Start Scrollbar*/
 ::-webkit-scrollbar /*scrollbar width*/
 {
@@ -317,7 +330,51 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
 
 }
 /*end main scoreboard*/
-
+.played-history-title
+{
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+.played-history-wrapper
+{
+    margin-top: 8px;
+    overflow-y: scroll;
+    height: 580px;
+}
+.move-history-box
+{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 10px 9px 10px;
+}
+.history-player-move-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.history-player-name
+{
+    font-size: 14px;
+    font-weight: 700;
+    color: #828282;
+}
+.history-position-scenary-field
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: #0097E6;
+}
 @media screen and (max-width:1670px)
 {
     .big-container
@@ -345,5 +402,13 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
         width: 120px;
         height: 120px;
         font-size: 90px;
+    }
+    .played-history-title
+    {
+        margin-top: 6px
+    }
+    .played-history-wrapper
+    {
+        height: 490px;
     }
 }
