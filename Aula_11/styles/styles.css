@@ -17,6 +17,12 @@
     width: 50%;
     height: 100%;
     background-color: #2BA9EA;
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
 }
 .player-field
 {
@@ -275,8 +281,49 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
     margin-top: 98px;
 }
 
+/*start main scoreboard*/
+.scoreboard-box
+{   
+    width: 50%;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 11px 30px 19px 30px;
+}
+.scoreboard-title
+{
+    font-size: 24px;
+    font-weight: 700;
+    color: #0097E6;
+    text-align: center;
+}
+.score-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.score
+{
+    font-size: 48px;
+    font-weight: 700;
+    color: #0097E6;
+}
+.main-winner-name
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #828282;
+
+}
+/*end main scoreboard*/
+
 @media screen and (max-width:1670px)
 {
+    .big-container
+    {
+        padding: 20px 35px;
+    }
     .small-container
     {
         padding: 20px 35px;
@@ -292,5 +339,11 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
     .white-button-wrapper
     {
         margin-top: 40px;
+    }
+    .scenary-field
+    {
+        width: 120px;
+        height: 120px;
+        font-size: 90px;
     }
 }
