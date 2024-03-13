@@ -36,9 +36,18 @@ function toggleCurrentMove() //Tradução: alternar movimento atual
     }
 }
 
-function getWinner()
+function verifyFields(fieldOne, fieldTwo, fieldThree)
 {
     const $fieldList = document.querySelectorAll(".scenary-field-big");
+
+    const hasWinner = $fieldList[fieldOne].textContent != '' && $fieldList[fieldOne].textContent == $fieldList[fieldTwo].textContent && $fieldList[fieldTwo].textContent == $fieldList[fieldThree].textContent;
+
+    return hasWinner;
+}
+
+function getWinner()
+{
+    
      /*Nesse caso acima, em vez de um query selector convencional, capaz de armazenar apenas um valor 1:1, o querySelectorAll irá armazenar todos os
      campos com a classe especificada, criando um array para armazena-los sequencialmente de cima para baixo*/
 
@@ -46,7 +55,6 @@ function getWinner()
      
      if($fieldList[0].textContent == $fieldList[1].textContent && $fieldList[1].textContent == $fieldList[2].textContent)
      {
-        alert("foi :)")
      }
 }
 
