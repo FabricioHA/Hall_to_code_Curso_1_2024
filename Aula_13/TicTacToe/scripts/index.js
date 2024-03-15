@@ -1,138 +1,179 @@
-/*Desafio: Mudar o placar e exibir o vencedor de acordo com os inputs esquerdos, depois limpar esses mesmos campos*/
-
 //Entrada de dados
-const $winnerName = document.querySelector(".winner-name");
+const $namePlayer1 = document.querySelector(".player-name-1");
+const $namePlayer2 = document.querySelector(".player-name-2");
 
-//Botões de controle
-const $buttonStart = document.querySelector(".button-start");
-const $buttonReset = document.querySelector(".button-reset");
+function getField(fieldNumber)
+{
+    const $getingField = document.querySelector(".scenary-field-"+fieldNumber);
 
-//variaveis flexiveis
-let winner = 0;
-let player1score = 0;
-let player2score = 0;
-let startGame = "stoped";
-
-const game = {
-    currentMove: "X" //Tradução: Movimento atual
+    return $getingField;
 }
 
-function getField(fieldNumber) //esse parametro represennta o número correspondente do elemento HTML na sua classe.
-{
-    const $field = document.querySelector(".scenary-field-"+fieldNumber); //Nesse caso, o parametro fieldNumber representa o indice da classe/ID correspondente.
+//Saída de dados
+const $winnerName = document.querySelector(".main-winner-name");
+const $printScorePlayer1 = document.querySelector(".score-player-1");
+const $printScorePlayer2 = document.querySelector(".score-player-2");
 
-    return $field; //Nesse caso, retornamos o valor "document.querySelector(".scenary-field-"+fieldNumber);", sendo ele valor da variavel $field
+//Botões de ação
+const $startButton = document.querySelector(".button-start");
+const $resetButton = document.querySelector(".button-reset");
+
+//Objetos
+const gameMove = {
+    currentMove: "X"
 }
 
-function toggleCurrentMove() //Tradução: alternar movimento atual
+//Dados variaveis
+let scorePlayer1 = 0;
+let scorePlayer2 = 0;
+
+//Função para pegar todos os fields
+function getAllFields(allFields)
 {
-    if(game.currentMove == "X") 
+    return allFields = document.querySelectorAll(".scenary-field-big");
+}
+
+//Função para inserir texto no scenary field
+function toggleCurrentMove()
+{
+    if(gameMove.currentMove == "X")
     {
-        game.currentMove = "O";
+        gameMove.currentMove = "O";
     }
-    else if(game.currentMove== "O")
+    else if(gameMove.currentMove == "O")
     {
-        game.currentMove = "X";
+        gameMove.currentMove = "X";
     }
 }
 
-function verifyFields(fieldOne, fieldTwo, fieldThree)
+//Verifica os campos vencedores
+function verifyWinnerFields(fieldOne, fieldTwo, fieldThree)
 {
-    const $fieldList = document.querySelectorAll(".scenary-field-big");
+    $allScenaryField =  getAllFields();
 
-    const hasWinner = $fieldList[fieldOne].textContent != '' && $fieldList[fieldOne].textContent == $fieldList[fieldTwo].textContent && $fieldList[fieldTwo].textContent == $fieldList[fieldThree].textContent;
+    const winnerFieldsResult = $allScenaryField[fieldOne].textContent != '' && $allScenaryField[fieldOne].textContent == $allScenaryField[fieldTwo].textContent && $allScenaryField[fieldTwo].textContent == $allScenaryField[fieldThree].textContent;
 
-    return hasWinner;
+    return winnerFieldsResult;
 }
 
+//Função para capturar o vencedor do jogo
 function getWinner()
-{ 
-    if(verifyFields(0,1,2)) {
-        return game.currentMove;
-    } else if(verifyFields(3,4,5)) {
-        return game.currentMove;
-    } else if(verifyFields(3,4,5)) {
-        return game.currentMove;
-    } else if(verifyFields(6,7,8)) {
-        return game.currentMove;
-    } else if(verifyFields(0,3,6)) {
-        return game.currentMove;
-    } else if(verifyFields(1,4,7)) {
-        return game.currentMove;
-    } else if(verifyFields(2,5,8)) {
-        return game.currentMove;
-    } else if(verifyFields(0,4,8)) {
-        return game.currentMove;
-    } else if(verifyFields(2,4,6)) {
-        return game.currentMove;
-    } else {
-        return '';
-    }
-    /*A função acima irá retornar o como saida o ultimo movimento executado pelo jogador, possibilitando assim usar isso de base descobrir */
-}
-
-function addWinnerScore()
 {
-    if(winner == 1)
+    if(verifyWinnerFields(0,1,2)) //Se esse "verificador dos campos vencedores" for verdadeiro Então..
     {
-        player1score++;
+        return gameMove.currentMove;//retorna o movimento final referente ao vencedor
     }
-    else if(winner == 2)
+    else if(verifyWinnerFields(3,4,5))
     {
-        player2score++;
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(6,7,8))
+    {
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(0,3,6))
+    {
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(1,4,7))
+    {
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(2,5,8))
+    {
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(0,4,8))
+    {
+        return gameMove.currentMove;
+    }
+    else if(verifyWinnerFields(2,4,6))
+    {
+        return gameMove.currentMove;
     }
 }
 
 function printWinnerName()
 {
-    if(winner == 0)
+    if(getWinner() == "X")
     {
-        $winnerName.textContent = "Esperando Resultado";
+        if($namePlayer1.value == "")
+        {
+            $winnerName.textContent = "Jogador 1 Venceu";
+        }
+        else
+        {
+            $winnerName.textContent = $namePlayer1.value + " Venceu";
+        }
     }
-    else if(winner == 1)
+    else if(getWinner() == "O")
     {
-        $winnerName.textContent = "Jogador 1";
-    }
-    else if(winner == 2)
-    {
-        $winnerName.textContent = "Jogador 2";
-    }
-    else if(winner == 3)
-    {
-        $winnerName.textContent = "Deu marmelada!"
+        if($namePlayer2.value == "")
+        {
+            $winnerName.textContent = "Jogador 2 Venceu";
+        }
+        else
+        {
+            $winnerName.textContent = $namePlayer2.value + " Venceu";
+        }
     }
 }
 
-function resetWinnerScore()
+function changeScore(moveWinner)
 {
-    player1score = 0;
-    player2score = 0;
+    if(moveWinner == "X")
+    {
+        scorePlayer1++;
+    }
+    else if(moveWinner == "O")
+    {
+        scorePlayer2++;
+    }
 }
 
-//HandleSta
-$buttonStart.addEventListener("click", function()
+//Função para exibir 0 na frente de números entre 0 e 9
+function showPadStart(number)
 {
-    if(startGame == "stoped")
-    {
-        startGame = "started";
-    }
-    else if(startGame == "started")
-    {
-        startGame = "stoped";
-    }
-});
+    return number < 10? "0" + number.toString():number.toString()
+}
 
-for (let index = 0; index <= 8; index++) //Agora criamos um loop para indexar cada field até que seja menor ou igual a 8
+function printScorePlayers()
 {
-    const $field = getField(index); //Depositamos o valor da função de acordo com sua numeração
+    $printScorePlayer1.textContent = showPadStart(scorePlayer1);
+    $printScorePlayer2.textContent = showPadStart(scorePlayer2);
+}
 
-    $field.addEventListener("click", function() //Assim que o ekemento for clicado, ele será incrementado até o seu indice correspondente.
+function resetFields()
+{
+    const $allFields =  getAllFields();
+    for(let index=0; index<=8;index++)
+        $allFields[index].textContent = "";
+}
+
+function resetVariables()
+{
+    gameMove.currentMove = "X";
+}
+
+//Programar tabuleiro do jogo da velha
+for(let index = 0;index <=8; index++)
+{
+    //Botão scenary Field
+    const $scenaryfield = getField(index);
+
+    //Alterar texto do scenary field ao clicar
+    $scenaryfield.addEventListener("click", function()
     {
-        if(startGame==false) return;
-        $field.textContent = game.currentMove; //Aqui pegamos um valor de um objeto transcrevemos ele no field
-        console.log(getWinner())
-        toggleCurrentMove(); /*Aqui, quando o field for transcrito apartir do objeto game.currentMove, ele irá substituir seu valor de X para O, alternando
-        entre as jogadas.*/ 
-        /*Por fim criamos uma função anonima onde ao clicar em cada field, ele irá receber alterar o texto presente no mesmo*/
+        $scenaryfield.textContent = gameMove.currentMove;
+        console.log(getWinner());
+        changeScore(getWinner());
+        printScorePlayers();
+        printWinnerName();
+        toggleCurrentMove();
+        if(getWinner())
+        {
+            setTimeout(resetFields, 1000);
+            resetVariables();
+        }
     });
 }
