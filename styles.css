@@ -98,6 +98,19 @@ body
                 opacity: 1;
                 transition: all 0.350s;
             }
+            .card-box-transformation
+            {
+                background-color: #ccc;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+            }
+            .card-box-transformation:hover .card-box-transformation
+            {
+                transform: translateZ(20px);
+                transition: all 0.3s;
+            }
             .card-box:active
             {
                 cursor: default;
