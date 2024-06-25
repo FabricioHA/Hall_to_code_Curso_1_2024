@@ -23,7 +23,7 @@ const gameMove = {
     currentMove: "X",
     players: {
         score1: 0,
-        score2: 1,
+        score2: 0,
     },
 
 }
@@ -98,18 +98,27 @@ function getWinner()
     }
 }
 
-function getWinnerScore(winner)
+//Mudar pontuação no backend
+function changeScore(moveWinner)
 {
-    if(winner === "X")
+    if(moveWinner === "X")
     {
         gameMove.players.score1++;
     }
-    if(winner === "O")
+    else if(moveWinner === "O")
     {
         gameMove.players.score2++;
     }
 }
 
+//Imprimir pontuação nos elementos  
+function printScorePlayers()
+{
+    $printScorePlayer1.textContent = showPadStart(gameMove.players.score1);
+    $printScorePlayer2.textContent = showPadStart(gameMove.players.score2);
+}
+
+//Imprimir nome dos jogadores
 function printWinnerName()
 {
     if(getWinner() == "X")
@@ -136,30 +145,13 @@ function printWinnerName()
     }
 }
 
-function changeScore(moveWinner)
-{
-    if(moveWinner == "X")
-    {
-        scorePlayer1++;
-    }
-    else if(moveWinner == "O")
-    {
-        scorePlayer2++;
-    }
-}
-
 //Função para exibir 0 na frente de números entre 0 e 9
 function showPadStart(number)
 {
     return number < 10? "0" + number.toString():number.toString()
 }
 
-function printScorePlayers()
-{
-    $printScorePlayer1.textContent = showPadStart(scorePlayer1);
-    $printScorePlayer2.textContent = showPadStart(scorePlayer2);
-}
-
+//Resetar campos dos jogadores
 function resetFields()
 {
     const $allFields =  getAllFields();
@@ -185,9 +177,10 @@ for(let index = 0;index <=8; index++)
         ou seja, ele não irá trocar os valores entre "X" e "O" dos campos preenchidos pelos jogadores ao clicarem.*/
         $scenaryfield.textContent = gameMove.currentMove;
         console.log(getWinner());
-        console.log(getWinnerScore(getWinner()))
         changeScore(getWinner());
         printScorePlayers();
+        const winner = getWinner();
+        console.log(winner);
         printWinnerName();
         toggleCurrentMove();
         if(getWinner())

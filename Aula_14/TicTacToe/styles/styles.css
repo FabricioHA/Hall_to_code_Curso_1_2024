@@ -244,6 +244,7 @@ Para que ele possa ter uma posição absoluta apenas dentro da classe pai, preci
     color: #828282;
     font-weight: 700;
     cursor: pointer;
+    user-select: none;
 }
 .scenary-small
 {
