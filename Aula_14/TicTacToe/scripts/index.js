@@ -159,10 +159,17 @@ function resetFields()
         $allFields[index].textContent = "";
 }
 
+function disableFunction()
+{
+    document.querySelector("scenary-field").style.color = 'blue';
+    
+}
+
 function resetVariables()
 {
     gameMove.currentMove = "X";
 }
+
 
 //Programar tabuleiro do jogo da velha
 for(let index = 0;index <=8; index++)
@@ -173,8 +180,7 @@ for(let index = 0;index <=8; index++)
     //Alterar texto do scenary field ao clicar
     $scenaryfield.addEventListener("click", function()
     {
-        if($scenaryfield.textContent !== '') return; /*Neste caso, conteudo do "scenaryfield caso seja diferente de vazio, ele não irá retornar mais nada,
-        ou seja, ele não irá trocar os valores entre "X" e "O" dos campos preenchidos pelos jogadores ao clicarem.*/
+        if($scenaryfield.textContent !== '') return; /*Neste caso, conteudo do "scenaryfield caso seja diferente de vazio, ele não irá retornar mais nada, ou seja, ele não irá trocar os valores entre "X" e "O" dos campos preenchidos pelos jogadores ao clicarem.*/
         $scenaryfield.textContent = gameMove.currentMove;
         console.log(getWinner());
         changeScore(getWinner());
@@ -185,12 +191,12 @@ for(let index = 0;index <=8; index++)
         toggleCurrentMove();
         if(getWinner())
         {
+            disableFunction();
             setTimeout(resetFields, 1000);
             resetVariables();
         }
     });
 }
-
 console.log(1 === 1);
 /*
 Normalmente utilizamos os 2 iguais para fazer a verificação de valores em condicionais ou compaações lógicas
