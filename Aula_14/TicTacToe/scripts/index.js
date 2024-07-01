@@ -151,6 +151,22 @@ function showPadStart(number)
     return number < 10? "0" + number.toString():number.toString()
 }
 
+function disableScenaryFields()
+{
+    for(var i =0; i <= 8; i++)
+    {
+        document.querySelector(".scenary-field-"+i).style.pointerEvents = "none";
+    }
+}
+
+function ableScenaryFields()
+{
+    for(var i =0; i <= 8; i++)
+    {
+        document.querySelector(".scenary-field-"+i).style.pointerEvents = "auto";
+    }
+}
+
 //Resetar campos dos jogadores
 function resetFields()
 {
@@ -159,17 +175,10 @@ function resetFields()
         $allFields[index].textContent = "";
 }
 
-function disableFunction()
-{
-    document.querySelector("scenary-field").style.color = 'blue';
-    
-}
-
 function resetVariables()
 {
     gameMove.currentMove = "X";
 }
-
 
 //Programar tabuleiro do jogo da velha
 for(let index = 0;index <=8; index++)
@@ -191,10 +200,12 @@ for(let index = 0;index <=8; index++)
         toggleCurrentMove();
         if(getWinner())
         {
-            disableFunction();
+            disableScenaryFields();
             setTimeout(resetFields, 1000);
+            setTimeout(ableScenaryFields, 1000)
             resetVariables();
         }
+        
     });
 }
 console.log(1 === 1);
